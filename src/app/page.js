@@ -1,10 +1,10 @@
-import Counters from "./(components)/Counters"
+import Countdown from "./(components)/Countdown"
 
 export default function Home() {
+  let minutes = 25
   return (
     <main>
-      <h1>Hello World</h1>
-      <Counters />
+      <Countdown minutes={minutes} />
     </main>
   )
 }
