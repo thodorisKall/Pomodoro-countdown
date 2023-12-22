@@ -1,23 +1,27 @@
 "use client"
+import { FaPlay } from "react-icons/fa"
+import { FaArrowRotateLeft } from "react-icons/fa6"
 
+import { FaPause } from "react-icons/fa6"
 import React, { useState, useEffect } from "react"
 
-const Countdown = ({ StartMinutes = 25 }) => {
-  const [minutes, setMinutes] = useState(StartMinutes)
+const Countdown = ({ minutes }) => {
+  const [remMinutes, setRemMinutes] = useState(minutes)
   const [seconds, setSeconds] = useState(0)
   const [isRunning, setIsRunning] = useState(false)
+  const [startMinutes, setStartMinutes] = useState(minutes)
 
   useEffect(() => {
     let countdownInterval
 
     if (isRunning) {
       countdownInterval = setInterval(() => {
-        if (minutes === 0 && seconds === 0) {
+        if (remMinutes === 0 && seconds === 0) {
           clearInterval(countdownInterval)
           setIsRunning(false)
         } else {
           if (seconds === 0) {
-            setMinutes(minutes - 1)
+            setRemMinutes(remMinutes - 1)
             setSeconds(59)
           } else {
             setSeconds(seconds - 1)
@@ -31,7 +35,7 @@ const Countdown = ({ StartMinutes = 25 }) => {
     return () => {
       clearInterval(countdownInterval)
     }
-  }, [minutes, seconds, isRunning])
+  }, [remMinutes, seconds, isRunning])
 
   const startTimer = () => {
     setIsRunning(true)
@@ -43,19 +47,27 @@ const Countdown = ({ StartMinutes = 25 }) => {
 
   const resetTimer = () => {
     setIsRunning(false)
-    setMinutes(25)
+    setRemMinutes(startMinutes)
     setSeconds(0)
   }
   return (
-    <section>
-      <div>
+    <section className='bg-slate-500 flex justify-center text-2xl w-full'>
+      <div className=''>
         <div>
-          <span>{minutes < 10 ? `0${minutes}` : minutes}</span>:
+          <span>{remMinutes < 10 ? `0${remMinutes}` : remMinutes}</span>:
           <span>{seconds < 10 ? `0${seconds}` : seconds}</span>
         </div>
-        <button onClick={startTimer}>Start</button>
-        <button onClick={stopTimer}>Stop</button>
-        <button onClick={resetTimer}>Reset</button>
+        <div className='flex justify-around bg-red-200 w-full'>
+          <button onClick={resetTimer}>
+            <FaArrowRotateLeft />
+          </button>
+          <button onClick={startTimer}>
+            <FaPlay />
+          </button>
+          <button onClick={stopTimer}>
+            <FaPause />
+          </button>
+        </div>
       </div>
     </section>
   )
