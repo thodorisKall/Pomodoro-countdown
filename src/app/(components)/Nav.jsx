@@ -3,8 +3,8 @@ import { RiSettings3Fill } from "react-icons/ri"
 
 const Nav = () => {
   return (
-    <nav>
-      <div className='flex justify-end items-center w-1/2'>
+    <nav className='py-4 flex justify-end '>
+      <div className='flex justify-around items-center px-2 w-1/3 '>
         <Link href='/settings'>
           <RiSettings3Fill />
         </Link>
