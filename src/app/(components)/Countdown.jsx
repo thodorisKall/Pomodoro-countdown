@@ -1,9 +1,10 @@
 "use client"
+import playAudio from "./MusicPlayer"
 import { FaPlay } from "react-icons/fa"
 import { FaArrowRotateLeft } from "react-icons/fa6"
-
 import { FaPause } from "react-icons/fa6"
 import React, { useState, useEffect } from "react"
+import Image from "next/image"
 
 const Countdown = ({ minutes }) => {
   const [remMinutes, setRemMinutes] = useState(minutes)
@@ -17,6 +18,7 @@ const Countdown = ({ minutes }) => {
     if (isRunning) {
       countdownInterval = setInterval(() => {
         if (remMinutes === 0 && seconds === 0) {
+          playAudio("/sounds/soft-piano.wav")
           clearInterval(countdownInterval)
           setIsRunning(false)
         } else {
@@ -51,13 +53,19 @@ const Countdown = ({ minutes }) => {
     setSeconds(0)
   }
   return (
-    <section className='bg-slate-500 flex justify-center text-2xl w-full'>
-      <div className=''>
-        <div>
+    <section className=' flex flex-col justify-center items-center text-2xl w-full'>
+      <Image
+        src='/images/write-notes.png'
+        width={400}
+        height={400}
+        alt='picture of Countdown'
+      />
+      <div className='flex flex-col justify-center items-center text-orange '>
+        <div className='text-8xl mb-2'>
           <span>{remMinutes < 10 ? `0${remMinutes}` : remMinutes}</span>:
           <span>{seconds < 10 ? `0${seconds}` : seconds}</span>
         </div>
-        <div className='flex justify-around bg-red-200 w-full'>
+        <div className='flex justify-center bg-red-200 w-full text-6xl'>
           <button onClick={resetTimer}>
             <FaArrowRotateLeft />
           </button>
