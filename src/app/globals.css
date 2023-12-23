@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@400;700&family=Bangers&display=swap");
+
 * {
   box-sizing: border-box;
 }
@@ -11,6 +13,20 @@ body {
   min-height: 100vh;
   max-height: fit-content;
   overflow-y: scroll;
+  font-family: "Baloo Tammudu 2", sans-serif;
+  font-family: "Bangers", cursive;
+}
+
+nav {
+  @apply text-red font-bold;
+}
+
+nav a {
+  @apply hover:bg-light-red uppercase;
+}
+
+.pomodoroNav a {
+  @apply bg-orange py-3 px-6 rounded-full hover:bg-light-red;
 }
 
 .form-wrap {
