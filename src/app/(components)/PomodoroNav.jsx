@@ -1,4 +1,5 @@
 import Link from "next/link"
+
 const PomodoroNav = () => {
   return (
     <nav className='pomodoroNav  py-4 flex justify-center'>
