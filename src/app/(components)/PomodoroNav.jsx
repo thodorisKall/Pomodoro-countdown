@@ -2,8 +2,8 @@ import Link from "next/link"
 
 const PomodoroNav = () => {
   return (
-    <nav className='pomodoroNav  py-4 flex justify-center'>
-      <div className='flex justify-around text-2xl  w-3/5'>
+    <nav className='pomodoroNav py-4 flex justify-center'>
+      <div className='flex flex-wrap justify-center lg:justify-around lg:w-2/5'>
         <Link href='/'>
           <h2>pomodoro</h2>
         </Link>
