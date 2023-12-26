@@ -6,7 +6,7 @@ import { FaPause } from "react-icons/fa6"
 import React, { useState, useEffect } from "react"
 import Image from "next/image"
 
-const Countdown = ({ minutes }) => {
+const Countdown = ({ minutes, imageBanner }) => {
   const [remMinutes, setRemMinutes] = useState(minutes)
   const [seconds, setSeconds] = useState(0)
   const [isRunning, setIsRunning] = useState(false)
@@ -55,25 +55,25 @@ const Countdown = ({ minutes }) => {
   return (
     <section className=' flex flex-col justify-center items-center text-2xl w-full'>
       <Image
-        src='/images/write-notes.png'
+        src={imageBanner}
         width={400}
         height={400}
         alt='picture of Countdown'
       />
       <div className='flex flex-col justify-center items-center text-orange '>
-        <div className='text-8xl mb-2'>
+        <div className='text-8xl mb-2  font-bold'>
           <span>{remMinutes < 10 ? `0${remMinutes}` : remMinutes}</span>:
           <span>{seconds < 10 ? `0${seconds}` : seconds}</span>
         </div>
-        <div className='flex justify-center bg-red-200 w-full text-6xl'>
+        <div className='clk-btns flex justify-center bg-red-200 w-full text-6xl '>
           <button onClick={resetTimer}>
-            <FaArrowRotateLeft />
+            <FaArrowRotateLeft className='clock-btn' />
           </button>
           <button onClick={startTimer}>
-            <FaPlay />
+            <FaPlay className='clock-btn' />
           </button>
           <button onClick={stopTimer}>
-            <FaPause />
+            <FaPause className='clock-btn' />
           </button>
         </div>
       </div>
