@@ -4,7 +4,7 @@ import { RiSettings3Fill } from "react-icons/ri"
 
 const Nav = () => {
   return (
-    <nav className='topNav h-48  flex justify-around'>
+    <nav className='topNav h-78 flex flex-col items-center lg:justify-around lg:flex-row lg:h-48'>
       <Image
         src='/images/pomodoro-logo.png'
         width={500}
@@ -13,10 +13,13 @@ const Nav = () => {
         alt='pomodoro-logo'
       />
       <div className='flex justify-around items-center w-1/3 '>
-        <Link href='/settings' className='text-orange text-3xl'>
+        {/* <Link href='/settings' className='text-orange text-3xl'>
           <RiSettings3Fill />
-        </Link>
-        <Link href='about' className='bg-orange text-lg py-2 px-4 rounded-3xl '>
+        </Link> */}
+        <Link
+          href='/about'
+          className='bg-orange text-lg py-2 px-4 rounded-3xl '
+        >
           <h2>What is Pomodoro</h2>
         </Link>
       </div>
