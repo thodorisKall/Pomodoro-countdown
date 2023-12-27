@@ -2,8 +2,8 @@ import Link from "next/link"
 
 const Footer = () => {
   return (
-    <footer className='fixed bottom-0 right-0 m-4 text-gray-500'>
-      <div>
+    <footer className='flex justify-start mt-24 w-full  text-gray-500 '>
+      <div className='w-2/3 mx-auto mb-12'>
         <h2 className='capitalize'>developed by thodoris kallioras</h2>
       </div>
     </footer>
