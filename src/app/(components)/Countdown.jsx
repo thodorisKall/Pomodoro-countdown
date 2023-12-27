@@ -61,13 +61,13 @@ const Countdown = ({ minutes, imageBanner }) => {
         alt='picture of Countdown'
       />
       <div className='flex flex-col justify-center items-center text-orange '>
-        <div className='text-8xl mb-2  font-bold'>
+        <div className='minutes text-8xl mb-2 font-bold'>
           <span>{remMinutes < 10 ? `0${remMinutes}` : remMinutes}</span>:
           <span>{seconds < 10 ? `0${seconds}` : seconds}</span>
         </div>
         <div className='clk-btns flex justify-around w-full text-6xl '>
           <button onClick={resetTimer}>
-            <FaArrowRotateLeft className='clock-btn' />
+            <FaArrowRotateLeft className='clock-btn ' />
           </button>
           <button onClick={startTimer}>
             <FaPlay className='clock-btn' />
