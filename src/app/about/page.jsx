@@ -19,15 +19,15 @@ const page = () => {
             The Pomodoro Technique is a time management method developed by
             Francesco Cirillo in the late 1980s. It uses a timer to break work
             into intervals, traditionally 25 minutes in length, separated by
-            short breaks. Each interval is known as a "pomodoro", from the
-            Italian word for 'tomato', inspired by the tomato-shaped kitchen
-            timer Cirillo used as a university student.
+            short breaks. Each interval is known as a pomodoro, from the Italian
+            word for tomato, inspired by the tomato-shaped kitchen timer Cirillo
+            used as a university student.
           </p>
           <h3>Description</h3>
           <p>
             The Pomodoro Technique is a productivity method that involves
-            working in 25-minute focused bursts, known as "pomodoros", followed
-            by 5-minute breaks. After four pomodoros, a longer break of 15-30
+            working in 25-minute focused bursts, known as pomodoros, followed by
+            5-minute breaks. After four pomodoros, a longer break of 15-30
             minutes is recommended. This approach is designed to boost
             efficiency and maintain consistent attention, preventing burnout and
             managing distractions.
