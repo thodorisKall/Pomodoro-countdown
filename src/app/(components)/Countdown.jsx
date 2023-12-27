@@ -53,7 +53,7 @@ const Countdown = ({ minutes, imageBanner }) => {
     setSeconds(0)
   }
   return (
-    <section className=' flex flex-col justify-center items-center text-2xl w-full'>
+    <section className=' flex flex-col justify-center items-center mb-8  text-2xl w-full '>
       <Image
         src={imageBanner}
         width={300}
