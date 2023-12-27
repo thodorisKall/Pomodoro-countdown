@@ -6,7 +6,7 @@ This project aims to implement a modern application using React and Next.js, sho
 
 ## 2. Deployment
 
-The app is deployed and can be accessed at [Your Site URL](pomodoro-countdown-woad.vercel.app)
+The app is deployed and can be accessed at [Pomodoro App](https://pomodoro-countdown-6t1hdbqio-thodoriskall.vercel.app/)
 
 ## 3. Description
 
